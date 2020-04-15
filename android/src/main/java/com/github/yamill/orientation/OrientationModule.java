@@ -115,6 +115,15 @@ public class OrientationModule extends ReactContextBaseJavaModule implements Lif
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
     }
 
+    @ReactMethod
+    public void unlockToUser() {
+        final Activity activity = getCurrentActivity();
+        if (activity == null) {
+            return;
+        }
+        activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
+    }
+
     @Override
     public @Nullable Map<String, Object> getConstants() {
         HashMap<String, Object> constants = new HashMap<String, Object>();

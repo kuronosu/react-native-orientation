@@ -24,13 +24,13 @@ function getKey(listener) {
 
 module.exports = {
   getOrientation(cb) {
-    Orientation.getOrientation((error,orientation) =>{
+    Orientation.getOrientation((error, orientation) => {
       cb(error, orientation);
     });
   },
 
   getSpecificOrientation(cb) {
-    Orientation.getSpecificOrientation((error,orientation) =>{
+    Orientation.getSpecificOrientation((error, orientation) => {
       cb(error, orientation);
     });
   },
@@ -53,6 +53,10 @@ module.exports = {
 
   unlockAllOrientations() {
     Orientation.unlockAllOrientations();
+  },
+
+  unlockToUser() {
+    Orientation.unlockToUser();
   },
 
   addOrientationListener(cb) {

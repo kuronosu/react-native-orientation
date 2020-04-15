@@ -148,6 +148,9 @@ export default class AppScreen extends Component {
     // this unlocks any previous locks to all Orientations
     // Orientation.unlockAllOrientations();
 
+    // this unlocks the rotation settings set by the user
+    // Orientation.unlockToUser();
+
     Orientation.addOrientationListener(this._orientationDidChange);
   },
 
@@ -217,5 +220,6 @@ removeSpecificOrientationListener((specificOrientation) => {});
 - `lockToLandscapeLeft()`
 - `lockToLandscapeRight()`
 - `unlockAllOrientations()`
+- `unlockToUser()` Only android
 - `getOrientation((err, orientation) => {})`
 - `getSpecificOrientation((err, specificOrientation) => {})`
